@@ -3,8 +3,8 @@
         <div class="px-[10px] transition-all duration-200 xl:px-[30px] xl:h-full xl:w-full xl:items-center" :class="{ 'h-[40px] bg-transparent': !isToggleMenu, 'h-[230px] bg-black': isToggleMenu }">
             <div class="flex justify-between xl:h-full xl:w-full xl:items-center">
                 <div class="pt-[10px] xl:pt-[0px] xl:h-max xl:items-center">
-                    <h4 class="font-bold text-[16px] xl:w-max xl:text-[20px]" :class="{ 'text-black': !isToggleMenu, 'text-white': isToggleMenu }">
-                        Kankawee Aramrak</h4>
+                    <NuxtLink to="/" class="font-bold text-[16px] xl:w-max xl:text-[20px]" :class="{ 'text-black': !isToggleMenu, 'text-white': isToggleMenu }">
+                        Kankawee Aramrak</NuxtLink>
                 </div>
 
                 <!-- Hamburger mobile menu -->
@@ -85,10 +85,11 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import Cookies from 'js-cookie';
 
 //Var
 const isToggleMenu = ref(false);
-let page_lang = ref('EN');
+let page_lang = ref(Cookies.get('page_lang') ?? 'EN');
 
 //Emit
 const emit = defineEmits(['update:page_lang']);
@@ -106,5 +107,6 @@ function Page_Lang_Update() {
         page_lang.value = 'EN';
         emit('update:page_lang', 'EN');
     }
+    Cookies.set('page_lang', page_lang.value, { expires: 7 });
 }
 </script>

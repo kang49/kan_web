@@ -78,9 +78,10 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import Cookies from 'js-cookie';
 
 //Var
-let page_lang = ref('EN');
+let page_lang = ref(Cookies.get('page_lang') ?? 'EN');
 function Page_Lang_EmitHandler(lang: string) {
     if (lang === 'EN') {
         page_lang.value = 'EN';
