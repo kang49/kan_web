@@ -78,7 +78,7 @@
         </div>
 
         <!-- Page4 -->
-        <div class="min-h-full w-full pt-[100px] px-[30px]">
+        <div class="min-h-full w-full pt-[150px] px-[30px]">
             <div class="w-full h-[300px] flex justify-between items-center">
                 <div class="w-full flex justify-between items-center">
                     <div class="w-[50%] pr-[20px]">
@@ -92,7 +92,7 @@
                             <h4 v-if="page_lang === 'TH'" class="text-black font-normal text-[12px]">"นั่นคือคำที่พ่อเคยบอกผมไว้ตอนเด็กๆ คำพูดเรียบง่ายนี้ยังคงอยู่กับผมเสมอ คอยเตือนให้ผมรู้ว่าความอิสระและความหลงใหลคือกุญแจสำคัญของการมีชีวิตที่เติมเต็ม"</h4>
                         </div>
                     </div>
-                    <div class="w-[50%]">
+                    <div class="h-[400px]">
                         <NuxtImg src="/img/mypic3.png" loading="lazy" class="h-full w-full object-cover"></NuxtImg>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
         </div>
 
         <!-- Page5 -->
-        <div class="min-h-[720px] w-full pt-[100px]">
+        <div class="min-h-[720px] w-full pt-[150px]">
             <div class="w-full h-[450px] flex justify-center items-center relative">
                 <NuxtImg src="/img/highschoolfr.png" loading="lazy" class="h-full w-full px-[30px] object-cover object-[-210px_0px] z-10"></NuxtImg>
                 <div class="w-[70%] min-h-max pb-[20px] pt-[100px] bg-[#E3D583] absolute flex justify-end items-end bottom-[-170px] right-0 z-0">
