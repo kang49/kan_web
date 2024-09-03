@@ -18,7 +18,7 @@ export default defineNuxtConfig({
       link: [
         { rel: 'stylesheet', href: 'https://pro.fontawesome.com/releases/v5.15.4/css/all.css' }
       ],
-      title: 'Kankawee Aramrak กันต์กวี อารามรักษ์ (Home)',
+      title: 'Kankawee Aramrak',
       script: [],
     },
   },

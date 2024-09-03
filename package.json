@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "kan_web",
   "private": true,
   "type": "module",
   "scripts": {
@@ -7,7 +7,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "start": "PORT=3006 node .output/server/index.mjs",
+    "product": "yarn install && nuxt build"
   },
   "dependencies": {
     "js-cookie": "^3.0.5",
