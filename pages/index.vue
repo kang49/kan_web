@@ -13,8 +13,8 @@
                 <div class="w-[50%]"></div>
                 <div class="w-[50%] pr-[30px]">
                     <div>
-                        <h3 v-if="page_lang === 'EN'" class="font-bold text-[16px] xl:text-[22px]">Kankawee Aramrak</h3>
-                        <h3 v-else-if="page_lang === 'TH'" class="font-bold text-[16px] xl:text-[22px]">กันต์กวี อารามรักษ์</h3>
+                        <h1 v-if="page_lang === 'EN'" class="font-bold text-[16px] xl:text-[22px]">Kankawee Aramrak</h1>
+                        <h1 v-else-if="page_lang === 'TH'" class="font-bold text-[16px] xl:text-[22px]">กันต์กวี อารามรักษ์</h1>
                     </div>
 
                     <div class="pt-[10px]">
@@ -144,7 +144,7 @@ onMounted(() => {
     //Animation Scripts
     setTimeout(() => {
         //Change Title
-        document.title = 'Kankawee Aramrak กันต์กวี อารามรักษ์ (Home)';
+        document.title = 'Kankawee Aramrak';
     }, 200);
 });
 </script>

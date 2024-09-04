@@ -3,7 +3,7 @@
 
         <div class="w-full min-h-[calc(100dvh)]">
             <div class="h-max w-full flex items-center pt-[100px] pb-[40px]">
-                <div class="px-[20px] w-full h-max space-y-[10px] xl:px-[100px]">
+                <div class="px-[20px] w-full h-max space-y-[10px] xl:px-[300px]">
                     <h1 v-if="page_lang === 'EN'" class="text-[20px] font-bold xl:text-[22px]">Kankawee Aramrak</h1>
                     <h1 v-if="page_lang === 'TH'" class="text-[20px] font-bold xl:text-[22px]">กันต์กวี อารามรักษ์</h1>
 

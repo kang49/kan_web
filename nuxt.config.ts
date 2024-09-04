@@ -16,10 +16,14 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no',
       link: [
-        { rel: 'stylesheet', href: 'https://pro.fontawesome.com/releases/v5.15.4/css/all.css' }
+        { rel: 'stylesheet', href: 'https://pro.fontawesome.com/releases/v5.15.4/css/all.css', },
+        { rel: 'icon', type: 'image/png', href: '/favicon.ico' }
       ],
       title: 'Kankawee Aramrak',
       script: [],
+      meta: [
+        { name: 'google-adsense-account', content: 'ca-pub-3005040693139479' },
+      ]
     },
   },
 })
