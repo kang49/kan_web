@@ -12,8 +12,11 @@
     "product": "yarn install && nuxt build"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.15",
+    "dayjs": "^1.11.13",
     "js-cookie": "^3.0.5",
     "nuxt": "^3.13.0",
+    "remark-reading-time": "^2.0.1",
     "vue": "latest"
   },
   "devDependencies": {

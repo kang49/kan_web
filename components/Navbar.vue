@@ -69,7 +69,7 @@
                         <h4 v-if="page_lang === 'EN'">Home</h4>
                         <h4 v-if="page_lang === 'TH'">หน้าแรก</h4>
                     </NuxtLink>
-                    <NuxtLink to="/">
+                    <NuxtLink to="/blogs">
                         <h4 v-if="page_lang === 'EN'">Personal Blog</h4>
                         <h4 v-if="page_lang === 'TH'">บล็อกส่วนตัว</h4>
                     </NuxtLink>

@@ -5,12 +5,19 @@ export default defineNuxtConfig({
   experimental: {
     payloadExtraction: false,
   },
-  ssr: true,
+  ssr: false,
   css: ['~/assets/styles.css'],
   components: {
     dirs: ["~/components"],
   },
   modules: ['@nuxtjs/tailwindcss', '@nuxt/image', '@nuxt/content'],
+  content: {
+    markdown: {
+      anchorLinks: false,
+      remarkPlugins: ['remark-reading-time']
+    },
+    documentDriven: true
+  },
   app: {
     head: {
       charset: 'utf-8',

@@ -120,7 +120,7 @@
         </div>
     </div>
 
-    <div class="pt-[50px] xl:pt-[150px]">
+    <div class="pt-[100px] xl:pt-[150px]">
         <Footer/>
     </div>
 </template>
@@ -131,6 +131,7 @@ import Cookies from 'js-cookie';
 
 //Var
 let page_lang = ref(Cookies.get('page_lang') ?? 'EN');
+
 function Page_Lang_EmitHandler(lang: string) {
     if (lang === 'EN') {
         page_lang.value = 'EN';

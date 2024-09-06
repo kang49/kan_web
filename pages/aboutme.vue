@@ -73,7 +73,9 @@
                 </div>
             </div>
         </div>
-        <Footer/>
+        <div class="w-full h-max pt-[50px]">
+            <Footer/>
+        </div>
 </template>
 
 <script setup lang="ts">
