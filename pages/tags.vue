@@ -2,18 +2,18 @@
     <Navbar @update:page_lang="Page_Lang_EmitHandler" />
 
     <div class="w-full min-h-[calc(100dvh)]">
-        <div class="w-full h-max pt-[100px] px-[20px]">
+        <div class="w-full h-max pt-[100px] px-[20px] xl:px-[300px]">
             <div class="w-full h-max flex items-center">
-                <i class="far fa-tags mr-[5px]"></i>
-                <NuxtLink v-if="page_lang === 'EN'" to="/tags" class="text-[20px] font-bold">Tags</NuxtLink>
-                <NuxtLink v-if="page_lang === 'TH'" to="/tags" class="text-[20px] font-bold">แท็ก</NuxtLink>
+                <i class="far fa-tags mr-[5px] xl:text-[18px]"></i>
+                <NuxtLink v-if="page_lang === 'EN'" to="/tags" class="text-[20px] font-bold xl:text-[22px]">Tags</NuxtLink>
+                <NuxtLink v-if="page_lang === 'TH'" to="/tags" class="text-[20px] font-bold xl:text-[22px]">แท็ก</NuxtLink>
             </div>
 
             <!-- No Tags -->
             <div class="w-full h-max px-[20px] pt-[30px]">
                 <h4 class="mb-[20px] w-full h-max" v-for="category in categories" :key="category.name">
                     <div class="w-full h-max grid grid-cols-2 items-center">
-                        <NuxtLink :to="{ path: 'blogs_tags', query: { tags_name: category.name } }" class="underline text-[16px]"># {{ category.name }}</NuxtLink>
+                        <NuxtLink :to="{ path: 'blogs_tags', query: { tags_name: category.name } }" class="underline text-[16px] xl:text-[18px]"># {{ category.name }}</NuxtLink>
                         <div class="w-full h-max flex items-center">
                             <i class="fal fa-file-alt mr-[5px] text-[18px]"></i>
                             <h4 class="text-[16px]">{{ category.count }} Posts</h4>
@@ -23,9 +23,9 @@
             </div>
 
             <NuxtLink to="/blogs" class="w-max h-max flex items-center">
-                <i class="fal fa-long-arrow-left text-[22px] px-[10px]"></i>
-                <h4 v-if="page_lang === 'EN'" class="text-[16px] font-bold">Return to Blogs</h4>
-                <h4 v-if="page_lang === 'TH'" class="text-[16px] font-bold">กลับสู่หน้าบล็อก</h4>
+                <i class="fal fa-long-arrow-left text-[22px] px-[10px] xl:text-[26px]"></i>
+                <h4 v-if="page_lang === 'EN'" class="text-[16px] font-bold xl:text-[18px]">Return to Blogs</h4>
+                <h4 v-if="page_lang === 'TH'" class="text-[16px] font-bold xl:text-[18px]">กลับสู่หน้าบล็อก</h4>
             </NuxtLink>
         </div>
     </div>
