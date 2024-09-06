@@ -15,7 +15,7 @@
                 <!-- Grid layout for 3 columns and a max of 2 rows -->
                 <ul class="grid grid-cols-3 gap-[10px]">
                     <!-- Limit the number of categories to the first 6 -->
-                    <li v-for="category in categories.slice(0, 6)" :key="category.name" class="truncate">
+                    <li class="w-max h-max" v-for="category in categories.slice(0, 6)" :key="category.name">
                         <NuxtLink :to="{ path: 'blogs_tags', query: { tags_name: category.name } }" class="underline text-[14px]">
                             # {{ category.name }}
                         </NuxtLink>
@@ -40,11 +40,16 @@
                 <article v-if="content_data" v-for="post in content_data" class="mb-4 h-max">
                     <NuxtLink :to="post._path" class="flex justify-between w-full h-max">
                         <div class="w-[50%] h-max">
-                            <h2 v-if="page_lang === 'EN' || !post.title_th" class="text-[18px] font-bold text-black truncate">{{ post.title }}</h2>
-                            <h2 v-if="page_lang === 'TH' && post.title_th" class="text-[18px] font-bold text-black truncate">{{ post.title_th }}</h2>
+                            <!-- Title with 2 lines clamp -->
+                            <h2 v-if="page_lang === 'EN' || !post.title_th" class="text-[18px] font-bold text-black line-clamp-2">{{ post.title }}</h2>
+                            <h2 v-if="page_lang === 'TH' && post.title_th" class="text-[18px] font-bold text-black line-clamp-2">{{ post.title_th }}</h2>
+                            
                             <div class="pt-[10px] text-[12px] h-[100px] relative">
+                                <!-- Description -->
                                 <p v-if="page_lang === 'EN' || !post.title_th" class="description">{{ post.description }}</p>
                                 <p v-if="page_lang === 'TH' && post.description_th" class="description">{{ post.description_th }}</p>
+                                
+                                <!-- Date -->
                                 <p class="absolute bottom-0 text-[#9d9d9d]"><i class="fal fa-calendar-alt mr-[5px]"></i>{{ formatDate(post.date) }}</p>
                             </div>
                         </div>
