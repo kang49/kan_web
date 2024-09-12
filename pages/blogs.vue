@@ -57,6 +57,7 @@
                             v-if="post.image"
                             :src="post.image"
                             loading="lazy"
+                            format="webp"
                             class="w-[120px] h-[70px] bg-[#9D9D9D9D] object-scale-down rounded-[10px] xl:w-[200px] xl:h-[120px]"
                             alt="Kankawee Aramrak Blog"
                         />

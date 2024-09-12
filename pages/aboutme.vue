@@ -33,12 +33,12 @@
                         <h4 v-if="page_lang === 'EN'" class="text-[14px] font-normal xl:text-[16px]">This is the beginning of my story. So let me first explain why I decided to create this website. Back in October 2023, I had the opportunity to attend the '42Bangkok Discovery Piscine' camp.</h4>
                         <h4 v-if="page_lang === 'TH'" class="text-[14px] font-normal xl:text-[16px]">นี่คือจุดเริ่มต้นของเรื่องราวต่างๆ เกี่ยวกับผม ดังนั้นขอเล่าก่อนเลยว่าทำไมผมถึงเลือกที่จะสร้างหน้าเว็บนี้ขึ้นมา ย้อนกลับไปเมื่อประมาณเดือนตุลาคม ปี 2023 ผมได้มีโอกาสไปเข้าค่าย '42Bangkok Discovery Piscine'</h4>
                         <div class="flex justify-center">
-                            <NuxtImg format="webp" src="/img/42disco_camp.png" alt="kankawee aramrak 42bangkok" loading="lazy" class="w-full xl:px-[100px]"></NuxtImg>
+                            <NuxtImg format="webp" src="/img/42disco_camp.png" alt="kankawee aramrak 42bangkok" class="w-full xl:px-[100px]"></NuxtImg>
                         </div>
                         <h4 v-if="page_lang === 'EN'" class="text-[14px] font-normal xl:text-[16px]">During the camp, we were taught the basics of web development. I have to admit, I had never built a website before. I was always focused on the backend. The camp lasted for 7 days, with daily tasks and assignments submitted through 42's system.</h4>
                         <h4 v-if="page_lang === 'TH'" class="text-[14px] font-normal xl:text-[16px]">ในค่ายเขาสอนเกี่ยวกับการทำเว็บไซต์พื้นฐาน ซึ่งต้องบอกเลยว่าก่อนหน้านั้นไม่เคยเขียนเว็บมาก่อนเลย เพราะทำแต่ฝั่ง Backend ล้วนๆ ค่ายนี้มีเวลา 7 วัน โดยส่วนใหญ่ก็จะมีภารกิจให้ทำและส่งงานผ่านระบบของ 42</h4>
                         <div class="flex justify-center">
-                            <NuxtImg format="webp" src="/img/42inside.png" alt="kankawee aramrak 42bangkok" loading="lazy" class="h-[400px]"></NuxtImg>
+                            <NuxtImg format="webp" src="/img/42inside.png" alt="kankawee aramrak 42bangkok" class="h-[400px]"></NuxtImg>
                         </div>
                         <h4 v-if="page_lang === 'EN'" class="text-[14px] font-normal xl:text-[16px]">The photo shows the atmosphere inside the camp, held in the 42Bangkok building. They provided iMacs for free use by their students. I brought my own MacBook since I wasn't used to the Magic Mouse, so I only used the iMac to submit my assignments.</h4>
                         <h4 v-if="page_lang === 'TH'" class="text-[14px] font-normal xl:text-[16px]">ตามภาพนี่คือบรรยากาศภายในค่าย ซึ่งเป็นภายในตึกของ 42Bangkok จะมีเครื่อง iMac ให้ใช้ฟรีสำหรับนักเรียนของที่นั่น ส่วนผมที่เข้าค่ายชั่วคราวก็เอา MacBook ไปเอง เพราะใช้ Magic Mouse ไม่ถนัด เลยเปิด iMac ไว้แค่กดส่งงานพอ</h4>

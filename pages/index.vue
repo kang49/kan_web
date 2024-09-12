@@ -6,7 +6,7 @@
             <div class="h-[70%] min-h-[600px] relative w-full flex items-center">
                 <div class="h-full w-[250px] absolute z-0 bg-[#E5C8AE] xl:w-[400px]"></div>
                 <div class="w-[60%] xl:pl-[100px]">
-                    <NuxtImg format="webp" src="/img/mypic1.png" alt="kankawee aramrak" loading="lazy" class="z-10 relative h-[500px] ml-[30px] object-cover xl:h-[550px]"></NuxtImg>
+                    <NuxtImg format="webp" src="/img/mypic1.png" alt="kankawee aramrak" class="z-10 relative h-[500px] ml-[30px] object-cover xl:h-[550px]"></NuxtImg>
                 </div>
             </div>
             <div class="z-20 w-full absolute pt-[200px] flex justify-between">
@@ -38,7 +38,7 @@
         <!-- Page2 -->
         <div class="min-h-full w-full pt-[100px] px-[30px] xl:px-[100px]">
             <div class="w-full h-[600px] flex justify-between items-center relative">
-                <NuxtImg format="webp" src="/img/mypic2.png" alt="kankawee aramrak" loading="lazy" class="h-full w-full object-cover"></NuxtImg>
+                <NuxtImg format="webp" src="/img/mypic2.png" alt="kankawee aramrak" class="h-full w-full object-cover"></NuxtImg>
                 <div class="w-full absolute flex justify-between">
                     <div class="w-[50%]"></div>
                     <div class="w-[50%] pr-[20px]">

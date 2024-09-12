@@ -27,7 +27,9 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/png', href: '/favicon.ico' }
       ],
       title: 'Kankawee Aramrak',
-      script: [],
+      script: [
+        { src: 'https://www.googletagmanager.com/gtag/js?id=G-9DV7T6872K', async: true }
+      ],
       meta: [
         { name: 'google-adsense-account', content: 'ca-pub-3005040693139479' },
       ]
