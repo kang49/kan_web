@@ -1,6 +1,6 @@
 <template>
     <div class="w-full h-max fixed z-50 xl:flex xl:items-center xl:h-[60px]">
-        <div class="px-[10px] transition-all duration-200 xl:px-[30px] xl:h-full xl:w-full xl:items-center" :class="{ 'h-[40px] bg-transparent': !isToggleMenu, 'h-[230px] bg-black': isToggleMenu }">
+        <div class="px-[10px] transition-all duration-200 xl:px-[30px] xl:h-full xl:w-full xl:items-center" :class="{ 'h-[40px] bg-white': !isToggleMenu, 'h-[230px] bg-black': isToggleMenu }">
             <div class="flex justify-between xl:h-full xl:w-full xl:items-center">
                 <div class="pt-[10px] xl:pt-[0px] xl:h-max xl:items-center">
                     <NuxtLink to="/" class="font-bold text-[16px] xl:w-max xl:text-[20px]" :class="{ 'text-black': !isToggleMenu, 'text-white': isToggleMenu }">
@@ -29,7 +29,7 @@
                         <h4 v-if="page_lang === 'EN'" class="w-max">Home</h4>
                         <h4 v-if="page_lang === 'TH'" class="w-max">หน้าแรก</h4>
                     </NuxtLink>
-                    <NuxtLink to="/">
+                    <NuxtLink to="/blogs">
                         <h4 v-if="page_lang === 'EN'" class="w-max">Personal Blog</h4>
                         <h4 v-if="page_lang === 'TH'" class="w-max">บล็อกส่วนตัว</h4>
                     </NuxtLink>
@@ -69,7 +69,7 @@
                         <h4 v-if="page_lang === 'EN'">Home</h4>
                         <h4 v-if="page_lang === 'TH'">หน้าแรก</h4>
                     </NuxtLink>
-                    <NuxtLink to="/">
+                    <NuxtLink to="/blogs">
                         <h4 v-if="page_lang === 'EN'">Personal Blog</h4>
                         <h4 v-if="page_lang === 'TH'">บล็อกส่วนตัว</h4>
                     </NuxtLink>

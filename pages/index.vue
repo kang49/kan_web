@@ -6,15 +6,15 @@
             <div class="h-[70%] min-h-[600px] relative w-full flex items-center">
                 <div class="h-full w-[250px] absolute z-0 bg-[#E5C8AE] xl:w-[400px]"></div>
                 <div class="w-[60%] xl:pl-[100px]">
-                    <NuxtImg src="/img/mypic1.png" loading="lazy" class="z-10 relative h-[500px] ml-[30px] object-cover xl:h-[550px]"></NuxtImg>
+                    <NuxtImg format="webp" src="/img/mypic1.png" alt="kankawee aramrak" class="z-10 relative h-[500px] ml-[30px] object-cover xl:h-[550px]"></NuxtImg>
                 </div>
             </div>
             <div class="z-20 w-full absolute pt-[200px] flex justify-between">
                 <div class="w-[50%]"></div>
                 <div class="w-[50%] pr-[30px]">
                     <div>
-                        <h3 v-if="page_lang === 'EN'" class="font-bold text-[16px] xl:text-[22px]">Kankawee Aramrak</h3>
-                        <h3 v-else-if="page_lang === 'TH'" class="font-bold text-[16px] xl:text-[22px]">กันต์กวี อารามรักษ์</h3>
+                        <h1 v-if="page_lang === 'EN'" class="font-bold text-[16px] xl:text-[22px]">Kankawee Aramrak</h1>
+                        <h1 v-else-if="page_lang === 'TH'" class="font-bold text-[16px] xl:text-[22px]">กันต์กวี อารามรักษ์</h1>
                     </div>
 
                     <div class="pt-[10px]">
@@ -38,7 +38,7 @@
         <!-- Page2 -->
         <div class="min-h-full w-full pt-[100px] px-[30px] xl:px-[100px]">
             <div class="w-full h-[600px] flex justify-between items-center relative">
-                <NuxtImg src="/img/mypic2.png" loading="lazy" class="h-full w-full object-cover"></NuxtImg>
+                <NuxtImg format="webp" src="/img/mypic2.png" alt="kankawee aramrak" class="h-full w-full object-cover"></NuxtImg>
                 <div class="w-full absolute flex justify-between">
                     <div class="w-[50%]"></div>
                     <div class="w-[50%] pr-[20px]">
@@ -59,7 +59,7 @@
         <!-- Page3 -->
         <div class="min-h-full w-full pt-[100px] px-[30px] xl:px-[100px]">
             <div class="w-full h-[600px] flex justify-between items-center relative">
-                <NuxtImg src="/img/starship.png" loading="lazy" class="h-full w-full object-cover xl:object-[0px_0px]"></NuxtImg>
+                <NuxtImg format="webp" src="/img/starship.png" alt="starship" loading="lazy" class="h-full w-full object-cover xl:object-[0px_0px]"></NuxtImg>
                 <div class="w-full absolute flex justify-between">
                     <div class="w-[50%] pl-[20px]">
                         <div>
@@ -93,7 +93,7 @@
                         </div>
                     </div>
                     <div class="h-[400px]">
-                        <NuxtImg src="/img/mypic3.png" loading="lazy" class="h-full w-full object-cover"></NuxtImg>
+                        <NuxtImg format="webp" src="/img/mypic3.png" alt="kankawee aramrak" loading="lazy" class="h-full w-full object-cover"></NuxtImg>
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@
         <!-- Page5 -->
         <div class="min-h-[720px] w-full pt-[150px] xl:px-[100px]">
             <div class="h-[450px] flex justify-center items-center relative">
-                <NuxtImg src="/img/highschoolfr.png" loading="lazy" class="h-full w-full px-[30px] object-cover object-[-210px_0px] z-10 xl:object-contain xl:object-[0px_0px] xl:px-0"></NuxtImg>
+                <NuxtImg format="webp" src="/img/highschoolfr.png" alt="kankawee aramrak's friends" loading="lazy" class="h-full w-full px-[30px] object-cover object-[-210px_0px] z-10 xl:object-contain xl:object-[0px_0px] xl:px-0"></NuxtImg>
                 <div class="w-[270px] min-h-max pb-[20px] pt-[100px] bg-[#E3D583] absolute flex justify-end items-end bottom-[-170px] right-0 z-0 xl:w-[700px] xl:top-[350px]">
                     <div class="w-full bottom-[-200px] px-[20px]">
                         <div>
@@ -120,7 +120,7 @@
         </div>
     </div>
 
-    <div class="pt-[50px] xl:pt-[150px]">
+    <div class="pt-[100px] xl:pt-[150px]">
         <Footer/>
     </div>
 </template>
@@ -131,6 +131,7 @@ import Cookies from 'js-cookie';
 
 //Var
 let page_lang = ref(Cookies.get('page_lang') ?? 'EN');
+
 function Page_Lang_EmitHandler(lang: string) {
     if (lang === 'EN') {
         page_lang.value = 'EN';
@@ -144,7 +145,7 @@ onMounted(() => {
     //Animation Scripts
     setTimeout(() => {
         //Change Title
-        document.title = 'Kankawee Aramrak กันต์กวี อารามรักษ์ (Home)';
+        document.title = 'Kankawee Aramrak';
     }, 200);
 });
 </script>

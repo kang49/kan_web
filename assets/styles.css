@@ -85,3 +85,30 @@ textarea {
 html {
     scroll-behavior: smooth;
 }
+
+
+@tailwind base;
+
+/* จำกัด CSS ให้ใช้เฉพาะกับเนื้อหาใน Nuxt Content */
+.content h1 {
+  @apply text-2xl font-bold;
+}
+.content h2 {
+  @apply text-xl font-semibold;
+}
+.content h3 {
+  @apply text-lg;
+}
+.content h4 {
+  @apply text-base;
+}
+.content h5 {
+  @apply text-sm;
+}
+.content h6 {
+  @apply text-xs;
+}
+
+@tailwind components;
+
+@tailwind utilities;
