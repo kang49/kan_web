@@ -117,7 +117,7 @@ function Page_Lang_Update() {
             router.push(window.location.pathname.slice(0, -3));
         } else if (page_lang.value === 'TH' && window.location.pathname.slice(window.location.pathname.length - 3) !== '_th') {
             // check if it just be blog main page
-            if (window.location.pathname === '/blogs') {
+            if (window.location.pathname === '/blogs' || window.location.pathname === '/blogs_tags') {
                 // Do nithing, just stay on the same page
             } else {
                 router.push(window.location.pathname + '_th');
