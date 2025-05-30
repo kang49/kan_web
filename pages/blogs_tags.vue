@@ -15,7 +15,7 @@
             <div class="w-full h-max px-[20px] pt-[30px]">
                 <div v-if="content_data" v-for="post in content_data">
                     <article class="mb-4 h-max">
-                        <NuxtLink v-if="post.language === page_lang" :to="post._path" class="flex justify-between w-full h-max">
+                        <NuxtLink v-if="post.language === page_lang || post.showbothlang" :to="post._path" class="flex justify-between w-full h-max">
                             <div class="w-[50%] h-max">
                                 <!-- Title with 2 lines clamp -->
                                 <h2 v-if="page_lang === 'EN' || !post.title_th" class="text-[18px] font-bold text-black line-clamp-2 xl:text-[20px]">{{ post.title }}</h2>
@@ -45,7 +45,7 @@
                                 <!-- Placeholder for background color if no image -->
                             </div>
                         </NuxtLink>
-                        <div v-if="post.language === page_lang" class="w-full h-[1px] bg-[#9D9D9D9D] mt-[5px]"></div>
+                        <div v-if="post.language === page_lang || post.showbothlang" class="w-full h-[1px] bg-[#9D9D9D9D] mt-[5px]"></div>
                     </article>
                 </div>
             </div>
