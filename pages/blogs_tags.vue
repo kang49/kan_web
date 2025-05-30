@@ -13,39 +13,41 @@
 
             <!-- Has tag -->
             <div class="w-full h-max px-[20px] pt-[30px]">
-                <article v-if="content_data" v-for="post in content_data" class="mb-4 h-max">
-                    <NuxtLink :to="post._path" class="flex justify-between w-full h-max">
-                        <div class="w-[50%] h-max">
-                            <!-- Title with 2 lines clamp -->
-                            <h2 v-if="page_lang === 'EN' || !post.title_th" class="text-[18px] font-bold text-black line-clamp-2 xl:text-[20px]">{{ post.title }}</h2>
-                            <h2 v-if="page_lang === 'TH' && post.title_th" class="text-[18px] font-bold text-black line-clamp-2 xl:text-[20px]">{{ post.title_th }}</h2>
-                            
-                            <div class="pt-[10px] text-[12px] h-[100px] relative">
-                                <!-- Description -->
-                                <p v-if="page_lang === 'EN' || !post.title_th" class="description line-clamp-2 xl:text-[16px]">{{ post.description }}</p>
-                                <p v-if="page_lang === 'TH' && post.description_th" class="description line-clamp-2 xl:text-[16px]">{{ post.description_th }}</p>
+                <div v-if="content_data" v-for="post in content_data">
+                    <article class="mb-4 h-max">
+                        <NuxtLink v-if="post.language === page_lang" :to="post._path" class="flex justify-between w-full h-max">
+                            <div class="w-[50%] h-max">
+                                <!-- Title with 2 lines clamp -->
+                                <h2 v-if="page_lang === 'EN' || !post.title_th" class="text-[18px] font-bold text-black line-clamp-2 xl:text-[20px]">{{ post.title }}</h2>
+                                <h2 v-if="page_lang === 'TH' && post.title_th" class="text-[18px] font-bold text-black line-clamp-2 xl:text-[20px]">{{ post.title_th }}</h2>
                                 
-                                <!-- Date -->
-                                <p class="absolute bottom-0 text-[#9d9d9d] xl:text-[14px]"><i class="fal fa-calendar-alt mr-[5px] xl:text-[16px]"></i>{{ formatDate(post.date) }}</p>
+                                <div class="pt-[10px] text-[12px] h-[100px] relative">
+                                    <!-- Description -->
+                                    <p v-if="page_lang === 'EN' || !post.title_th" class="description line-clamp-2 xl:text-[16px]">{{ post.description }}</p>
+                                    <p v-if="page_lang === 'TH' && post.description_th" class="description line-clamp-2 xl:text-[16px]">{{ post.description_th }}</p>
+                                    
+                                    <!-- Date -->
+                                    <p class="absolute bottom-0 text-[#9d9d9d] xl:text-[14px]"><i class="fal fa-calendar-alt mr-[5px] xl:text-[16px]"></i>{{ formatDate(post.date) }}</p>
+                                </div>
                             </div>
-                        </div>
-                        <NuxtImg 
-                            v-if="post.image"
-                            :src="post.image"
-                            loading="lazy"
-                            format="webp"
-                            class="w-[120px] h-[70px] bg-[#9D9D9D9D] object-scale-down rounded-[10px] xl:w-[200px] xl:h-[120px]"
-                            alt="Kankawee Aramrak Blog"
-                        />
-                        <div 
-                            v-else 
-                            class="w-[120px] h-[70px] bg-[#e0e0e0] rounded-[10px] xl:w-[200px] xl:h-[120px]"
-                        >
-                            <!-- Placeholder for background color if no image -->
-                        </div>
-                    </NuxtLink>
-                    <div class="w-full h-[1px] bg-[#9D9D9D9D] mt-[5px]"></div>
-                </article>
+                            <NuxtImg 
+                                v-if="post.image"
+                                :src="post.image"
+                                loading="lazy"
+                                format="webp"
+                                class="w-[120px] h-[70px] bg-[#9D9D9D9D] object-scale-down rounded-[10px] xl:w-[200px] xl:h-[120px]"
+                                alt="Kankawee Aramrak Blog"
+                            />
+                            <div 
+                                v-else 
+                                class="w-[120px] h-[70px] bg-[#e0e0e0] rounded-[10px] xl:w-[200px] xl:h-[120px]"
+                            >
+                                <!-- Placeholder for background color if no image -->
+                            </div>
+                        </NuxtLink>
+                        <div v-if="post.language === page_lang" class="w-full h-[1px] bg-[#9D9D9D9D] mt-[5px]"></div>
+                    </article>
+                </div>
             </div>
 
             <NuxtLink to="/blogs" class="w-max h-max flex items-center">

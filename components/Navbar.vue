@@ -86,6 +86,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import Cookies from 'js-cookie';
+const router = useRouter();
 
 //Var
 const isToggleMenu = ref(false);
@@ -108,5 +109,20 @@ function Page_Lang_Update() {
         emit('update:page_lang', 'EN');
     }
     Cookies.set('page_lang', page_lang.value, { expires: 7 });
+
+    //Check this is blogs page
+    if (window.location.pathname.includes('/blogs')) {
+        //check last 3 letters string of url have _th
+        if (page_lang.value === 'EN' && window.location.pathname.slice(window.location.pathname.length - 3) === '_th') {
+            router.push(window.location.pathname.slice(0, -3));
+        } else if (page_lang.value === 'TH' && window.location.pathname.slice(window.location.pathname.length - 3) !== '_th') {
+            // check if it just be blog main page
+            if (window.location.pathname === '/blogs') {
+                // Do nithing, just stay on the same page
+            } else {
+                router.push(window.location.pathname + '_th');
+            }
+        } else {}
+    } else {}
 }
 </script>
