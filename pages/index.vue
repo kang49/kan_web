@@ -4,7 +4,7 @@
         <!-- Page1 -->
         <div class="min-h-full w-full pt-[70px] flex">
             <div class="h-[70%] min-h-[600px] relative w-full flex items-center">
-                <div class="h-full w-[250px] absolute z-0 bg-[#E5C8AE] xl:w-[400px]"></div>
+                <div class="h-full w-[250px] absolute z-0 bg-[#A2AEBB] xl:w-[400px]"></div>
                 <div class="w-[60%] xl:pl-[100px]">
                     <NuxtImg format="webp" src="/img/mypic1.png" alt="kankawee aramrak" class="z-10 relative h-[500px] ml-[30px] object-cover xl:h-[550px]"></NuxtImg>
                 </div>
@@ -18,10 +18,9 @@
                     </div>
 
                     <div class="pt-[10px]">
-                        <h4 v-if="page_lang === 'EN'" class="font-normal text-[12px] xl:text-[16px]">Co-Founder & Software Engineer of
-                            TensorMiK</h4>
+                        <h4 v-if="page_lang === 'EN'" class="font-normal text-[12px] xl:text-[16px]">I'm a student who interested in Tech and Space Exploration.</h4>
                         <h4 v-else-if="page_lang === 'TH'" class="font-normal text-[12px] xl:text-[16px]">
-                            ผู้ร่วมก่อตั้งทีมและวิศวกรซอฟท์แวร์ที่ TensorMiK</h4>
+                            แค่นักเรียนธรรมดาคนนึงที่สนใจใน Tech และอวกาศ</h4>
                     </div>
 
                     <NuxtLink to="/aboutme">
