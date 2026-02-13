@@ -18,9 +18,9 @@
                     </div>
 
                     <div class="pt-[10px]">
-                        <h4 v-if="page_lang === 'EN'" class="font-normal text-[12px] xl:text-[16px]">I'm a student who interested in Tech and Space Exploration.</h4>
+                        <h4 v-if="page_lang === 'EN'" class="font-normal text-[12px] xl:text-[16px]">I'm just a student who interested in Tech and Space Exploration.</h4>
                         <h4 v-else-if="page_lang === 'TH'" class="font-normal text-[12px] xl:text-[16px]">
-                            แค่นักเรียนธรรมดาคนนึงที่สนใจใน Tech และอวกาศ</h4>
+                            แค่นักศึกษาธรรมดาคนนึงที่สนใจใน Tech และอวกาศ</h4>
                     </div>
 
                     <NuxtLink to="/aboutme">
@@ -43,7 +43,7 @@
                     <div class="w-[50%] pr-[20px]">
                         <div>
                             <h3 v-if="page_lang === 'EN'" class="text-white font-bold text-[16px] right-0 text-right xl:text-[22px]">Software Development</h3>
-                            <h3 v-if="page_lang === 'TH'" class="text-white font-bold text-[16px] right-0 text-right xl:text-[22px]">การพัฒนาซอฟท์แวร์</h3>
+                            <h3 v-if="page_lang === 'TH'" class="text-white font-bold text-[16px] right-0 text-right xl:text-[22px]">การพัฒนาซอฟต์แวร์</h3>
                         </div>
 
                         <div class="pt-[10px]">
