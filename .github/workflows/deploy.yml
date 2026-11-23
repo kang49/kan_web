@@ -42,7 +42,10 @@ jobs:
             fi
             yarn build
 
-            if command -v pm2 >/dev/null 2>&1; then
+            if printf '%s\n' "${{ secrets.VPS_PASSWORD }}" | sudo -S pm2 describe kan_web >/dev/null 2>&1; then
+              printf '%s\n' "${{ secrets.VPS_PASSWORD }}" | sudo -S pm2 restart kan_web
+              printf '%s\n' "${{ secrets.VPS_PASSWORD }}" | sudo -S pm2 save
+            elif command -v pm2 >/dev/null 2>&1; then
               pm2 restart kan_web || PORT=3006 pm2 start .output/server/index.mjs --name kan_web
               pm2 save
             elif systemctl list-unit-files | grep -q '^kan_web\.service'; then
