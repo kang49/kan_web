@@ -18,9 +18,9 @@
                     </div>
 
                     <div class="pt-[10px]">
-                        <h4 v-if="page_lang === 'EN'" class="font-normal text-[12px] xl:text-[16px]">I'm just a student who interested in Tech and Space Exploration.</h4>
+                        <h4 v-if="page_lang === 'EN'" class="font-normal text-[12px] xl:text-[16px]">Computer Science @ Monash University — exploring HPC, Low-Level Systems, and Space Exploration.</h4>
                         <h4 v-else-if="page_lang === 'TH'" class="font-normal text-[12px] xl:text-[16px]">
-                            แค่นักศึกษาธรรมดาคนนึงที่สนใจใน Tech และอวกาศ</h4>
+                            นักศึกษา Computer Science @ Monash University — สนใจด้าน HPC, Low-Level Systems และเทคโนโลยีอวกาศ</h4>
                     </div>
 
                     <NuxtLink to="/aboutme">
