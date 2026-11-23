@@ -26,6 +26,10 @@ jobs:
             APP_DIR="${{ secrets.VPS_APP_DIR }}"
             APP_DIR="${APP_DIR:-/home/kang49/run_server/nodejs/kan_web}"
 
+            if [ "$(stat -c '%U' "$APP_DIR")" != "$USER" ]; then
+              printf '%s\n' "${{ secrets.VPS_PASSWORD }}" | sudo -S chown -R "$USER:$USER" "$APP_DIR"
+            fi
+
             cd "$APP_DIR"
             git config --global --add safe.directory "$APP_DIR"
             git fetch origin main
