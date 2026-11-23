@@ -20,14 +20,22 @@ jobs:
           port: 22
           script: |
             set -e
+            export PATH="$HOME/.local/bin:/usr/local/bin:$PATH"
+            [ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh"
+
             APP_DIR="${{ secrets.VPS_APP_DIR }}"
             APP_DIR="${APP_DIR:-/home/kang49/run_server/nodejs/kan_web}"
 
             cd "$APP_DIR"
+            git config --global --add safe.directory "$APP_DIR"
             git fetch origin main
             git reset --hard origin/main
 
-            yarn install --frozen-lockfile
+            if [ -f yarn.lock ]; then
+              yarn install --frozen-lockfile
+            else
+              yarn install
+            fi
             yarn build
 
             if command -v pm2 >/dev/null 2>&1; then
