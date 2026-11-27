@@ -84,6 +84,7 @@ export default defineEventHandler(async (event) => {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kankawee Aramrak - Gallery</title>
+  <script>window.location.replace('/');</script>
 </head>
 <body>
   <main>
